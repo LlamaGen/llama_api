@@ -66,5 +66,10 @@ upgrade:
 upgrade-offline:
 	alembic upgrade head --sql
 
+.PHONY: setup-model
+setup-model:
+	mkdir model
+	wget https://huggingface.co/IlyaGusev/saiga2_7b_gguf/resolve/main/ggml-model-q4_K.gguf -P model
+
 .PHONY: all
 all: format export-dependencies

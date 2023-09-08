@@ -47,7 +47,7 @@ class LLama:
         token_str = ""
         for token in generator:
             token_str += self.model.detokenize([token]).decode("utf-8", errors="ignore")
-            self.tokens.append(token)
+            # self.tokens.append(token) # uncomment for dialog
             if token == self.model.token_eos():
                 break
         return token_str

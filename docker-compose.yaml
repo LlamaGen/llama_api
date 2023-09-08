@@ -1,0 +1,7 @@
+services:
+  api:
+    build: .
+    environment:
+      - MODEL_PATH=/app/model/gguf-model-q4_1.bin
+    ports:
+      - 8000:8000

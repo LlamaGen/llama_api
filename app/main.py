@@ -1,10 +1,11 @@
 from fastapi import FastAPI
 
 from app.model import LLama
+import os
 
 app = FastAPI()
 
-model = LLama("model/gguf-model-q4_1.bin")
+model = LLama(os.environ.get("MODEL_PATH"))
 
 
 @app.get("/message")

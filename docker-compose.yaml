@@ -2,6 +2,6 @@ services:
   api:
     build: .
     environment:
-      - MODEL_PATH=/app/model/gguf-model-q4_1.bin
+      - MODEL_PATH=/app/model/ggml-model-q4_K.gguf
     ports:
       - 8000:8000
